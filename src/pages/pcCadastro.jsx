@@ -18,7 +18,7 @@ export default function PacienteCadastro() {
 
     const voltarInicio = (e) => {
         e.preventDefault();
-        navigate('/')
+        navigate('/entrar')
     }
 
     async function handleCadastro(e) {
@@ -37,7 +37,7 @@ export default function PacienteCadastro() {
             // Envio dos dados:
             const response = await axios.post('/api/paciente/cadastro', dadosPaciente);
             alert(`✅ Cadastro realizado com sucesso! Você já pode fazer login. ${response.data.message}`);
-            navigate('/paciente/login');
+            navigate('/paciente/dashboard');
 
         } catch (error) {
             console.error('❌ Erro de conexão com servidor:', error);
@@ -48,6 +48,8 @@ export default function PacienteCadastro() {
 
 
     return (
+        <body className='cadastro'>
+            
         <div className="container-cadastro">
             <div className="voltar">
                 <button onClick={voltarInicio}>
@@ -113,5 +115,6 @@ export default function PacienteCadastro() {
                 </div>
             </div>
         </div >
+                            </body>
     )
 }

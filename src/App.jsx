@@ -1,12 +1,11 @@
 import './styles/App.scss'
-import Home from './pages/home.jsx'
-
+import Home from './pages/home/home.jsx'
 function App() {
 
   return (
-   <div className="container">
-    <Home />
-   </div>
+    <div className="container">
+      <Home />
+    </div>
   )
 }
 

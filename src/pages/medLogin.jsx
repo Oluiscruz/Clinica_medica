@@ -14,7 +14,7 @@ export default function MedicoLogin() {
 
     const voltarInicio = (e) => {
         e.preventDefault();
-        navigate('/')
+        navigate('/entrar')
     }
 
     async function handleLogin(e) {
@@ -41,6 +41,8 @@ export default function MedicoLogin() {
 
 
     return (
+        <body className='login'>
+            
         <div className="container-login">
             <div className="voltar-home">
                 <button onClick={voltarInicio}>
@@ -72,5 +74,7 @@ export default function MedicoLogin() {
                 </div>
             </div>
         </div>
+        </body>
+
     )
 }

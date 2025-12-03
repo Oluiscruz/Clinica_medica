@@ -11,6 +11,7 @@ import MedicoLogin from './pages/medLogin.jsx';
 import MedicoCadastro from './pages/medCad.jsx';
 import MedicoDashboard from './pages/dashboards/med.jsx';
 import PacienteDashboard from './pages/dashboards/pc.jsx';
+import Connection from './pages/connection.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -18,10 +19,11 @@ createRoot(document.getElementById('root')).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/paciente/login" element={<PacienteLogin />} />
-          <Route path="/paciente/cadastro" element={<PacienteCadastro />} />
-          <Route path="/medico/login" element={<MedicoLogin />} />
+          <Route path="/entrar" element={<Connection />} />
           <Route path="/medico/cadastro" element={<MedicoCadastro />} />
+          <Route path="/paciente/cadastro" element={<PacienteCadastro />} />
+          <Route path="/paciente/login" element={<PacienteLogin />} />
+          <Route path="/medico/login" element={<MedicoLogin />} />
           <Route path="/medico/dashboard" element={<MedicoDashboard />} />
           <Route path="/paciente/dashboard" element={<PacienteDashboard />} />
         </Routes>
